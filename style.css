@@ -1,0 +1,572 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    color: bisque;
+    
+}
+body{
+    background-image: linear-gradient(to right, rgb(68, 40, 40), black, rgb(62, 29, 88));
+}
+.container {
+    display: flex;
+}
+
+.sidebar {
+    position: absolute;
+   
+    background-image: linear-gradient(60deg, rgb(34, 22, 22), rgb(30, 28, 31), rgb(62, 29, 88));
+    transition: transform 0.3s ease-in;
+    height: 100vh;
+    z-index:200;
+   
+}
+
+.sidebar nav {
+    padding: 45px;
+}
+
+.sidebar nav li {
+    list-style: none;
+    padding: 35px 0px;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+.sidebar nav li a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+.sidebar nav li a::after {
+    /*to give line below text hover effect*/
+    content: '';
+    width: 0;
+    height: 3px;
+    /* background: grey; */
+    background-image: linear-gradient(to right, red, blue, grey);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+.sidebar nav li a:hover::after {
+    width: 100%;
+
+}
+
+.main {
+    /* background-color: rgb(33, 32, 34); */
+    
+    width: 100vw;
+    height: 100vh;
+   
+}
+
+.info {
+    /* background-color: rgb(167, 104, 23); */
+    height: 60vh;
+    width: 70vw;
+    margin: 75px auto;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.devpic img {
+    height: 60vh;
+
+}
+
+.devinfo {
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hi {
+    font-size: 3em;
+    padding-top: 10px;
+    font-family: 'Noto Serif', serif;
+}
+
+.name {
+    font-size: 3em;
+    font-weight: bold;
+
+}
+
+.about {
+    font-size: 2em;
+    font-family: 'Noto Serif', serif;
+}
+
+.moreabout {
+    font-size: 1.7em;
+    margin-top: 10px;
+    font-family: 'Delicious Handrawn', cursive;
+}
+
+.buttons {
+    margin-top: 14px;
+    font-size: 7px;
+}
+
+.btn {
+    border: 2px solid rgb(53, 29, 29);
+    border-radius: 29px;
+    padding: 10px;
+    margin-right: 25px;
+    font-weight: bold;
+    font-size: 2em;
+    cursor: pointer;
+    background-image: linear-gradient(to right, grey, rgb(243, 115, 30));
+}
+
+.btn-sm {
+    font-size: 15px;
+    padding: 10px 25px;
+    margin: 12px 5px;
+}
+
+.btn:hover {
+    background-image: linear-gradient(to right, rgb(6, 223, 6), rgb(223, 238, 9));
+    color: rgb(252, 236, 11);
+}
+
+/* --------------------------For Contact Form-------------------- */
+.contactform {
+    padding: 5px 350px;
+    font-family: 'Noto Serif', serif;
+}
+
+.contactform h1 {
+    font-family: 'Delicious Handrawn', cursive;
+
+    padding: 25px 25px;
+}
+
+.contactform form div {
+    padding: 4px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactform form div input {
+    border: 2px solid black;
+    width: 20vw;
+    border-radius: 15px;
+    margin: 4px 0;
+    padding: 8px 100px;
+    font-size: larger;
+}
+
+#emailHelp {
+    font-size: 15px;
+    margin: 1px 8px;
+    color: rgb(7 120 83);
+}
+
+#form-check {
+    flex-direction: row;
+
+}
+
+#form-check input {
+    width: 24px;
+    margin: 2px 0;
+
+}
+.form-control{
+    color: black;
+}
+#msg{
+    color:greenyellow;
+    margin-top: -12px;
+    display: block;
+    position: absolute;
+    
+}
+/* -------------------About------------------------- */
+h1 {
+    font-size: 40px;
+    margin: 10px;
+    color: lightslategrey;
+}
+
+.intro {
+    margin: 10px 80px;
+
+}
+
+.fix {
+    position: absolute;
+}
+
+p {
+    font-size: 20px;
+    margin: 10px 10px;
+}
+
+h2 {
+    font-size: 40px;
+    margin: 10px;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 0px;
+
+}
+
+.tab-links {
+    margin-right: 30px;
+    font-size: 2em;
+    font-weight: 500;
+    cursor: pointer;
+    color: lightslategrey;
+    position: relative;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: aqua;
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    transition: 0.5s;
+
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-contents {
+    display: none;
+    /*To hide all the contents in tab-contents*/
+    margin: 10px 10px;
+}
+
+.tab-contents.active-tab {
+    /*To only show the active-tab items*/
+    display: block;
+}
+
+/* .skillitem{
+    display: flex;
+    align-items: center;
+} -------To display the content line to line*/
+
+.skill {
+    height: 6px;
+    width: 10em;
+    background-color: blueviolet;
+    border: 1px solid black;
+}
+
+.hundred {
+    width: 10em;
+
+}
+
+.fifty {
+    width: 5em;
+    background-color: rgb(252, 6, 6);
+}
+
+.twentyfive {
+    width: 2.5em;
+    background-color: rgb(39, 236, 0);
+}
+
+.ten {
+    width: 2em;
+    background-color: aqua;
+}
+
+.myprojects {
+    margin: 10px 10px;
+}
+
+.sidebargo {
+    transform: translate(-443px, 0px);
+    position: absolute;
+}
+
+.hamburger {
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    left: 10px;
+    z-index: 200;
+}
+
+.ham {
+    margin-top: 10px;
+    /* background: rgb(219, 214, 214); */
+    background-image: linear-gradient(to right, red, black);
+    border-radius: 5px;
+    border: 2px solid rgb(59, 53, 53);
+
+}
+
+.ham:hover {
+    background-image: linear-gradient(to left, red, black);
+}
+
+.cross {
+    background: rgb(219, 214, 214);
+    border-radius: 50px;
+    border: 2px solid rgb(59, 57, 57);
+    margin-top: 10px;
+    margin-left: 189px;
+  
+
+    /* background-image: linear-gradient( to right, rgb(93, 10, 202),rgb(39, 1, 1)); */
+    background-image: linear-gradient(to right, red, black);
+
+}
+
+.cross:hover {
+    background-image: linear-gradient(to left, red, black);
+}
+
+/* .projects{
+    margin: 10px 78px;
+    font-size: 2em;
+} */
+.skillitem {
+    color: grey;
+}
+
+.tab-contents ul li {
+    color: rgb(123, 123, 228);
+    list-style: none;
+}
+
+.tab-contents ul li.pa {
+    color: rgb(51, 163, 207);
+}
+
+.tab-contents ul li span {
+    font-size: 2em;
+    color: blueviolet;
+}
+
+.tab-contents ul li span.e {
+    color: rgb(203, 197, 206)
+}
+
+.copyright {
+    /* border: 2px solid red; */
+    /* background: blue; */
+    display: flex;
+    margin-top: 121px;
+    font-size: 15px;
+
+}
+
+.cp {
+
+    width: 100%;
+    font-size: 1.5em;
+    margin: 14px -2px;
+    margin-bottom: 30px;
+    display: flex;
+    text-align: center;
+    position: absolute;
+    z-index: 0;
+
+}
+
+.cp p {
+    font-size: 0.7em;
+    /* padding-left: 80px */
+    margin: auto;
+}
+
+.fa-solid {
+    margin-right: 0.2em;
+}
+
+.cp p:nth-child(2) {
+    background-color: red;
+}
+
+.fa-regular,
+.far {
+    font-weight: 400;
+    font-size: 0.5em;
+}
+
+.social-icons {
+    margin-top: 7px;
+    margin-left: 11px;
+    z-index: 1;
+    transition: transform 0.5s;
+    display: inline-block;
+}
+
+.social-icons:hover {
+    color: black;
+    transform: translateX(1px);
+    /* background: linear-gradient(to right, rgb(88, 84, 84), red); */
+    border-radius: 10px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 1.7em;
+    margin-right: 1em;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+
+}
+
+.social-icons a:hover {
+    color: black;
+    transform: translateY(4px);
+}
+
+/* -----------------------copyright-about-------------- */
+.copyright-about {
+    /* border: 2px solid red; */
+    /* background: blue; */
+    display: flex;
+    margin-top: 415px;
+    font-size: 15px;
+
+}
+
+/* -------copyright-contact------------- */
+.copyright-contact {
+    display: flex;
+    margin-top: 3px;
+    font-size: 15px;
+}
+
+.fa-solid.fa-phone {
+    color: rgb(10, 7, 241);
+    margin-right: 10px;
+    font-size: 1em;
+    transition: transform 0.5s;
+}
+
+.fa-solid.fa-phone:hover {
+    color: #4b127a;
+    transform: translateY(-5px);
+}
+.n{
+    font-size: 1.5em;
+    transition:transform 0.5s ;
+    cursor: pointer;
+}
+.n:hover{
+color: green;
+transform: translateX(-5px);
+
+}
+
+
+
+
+
+
+
+/* ------------------------For Small Screen----------------------------- */
+@media (max-width: 850px) {
+
+    /* .sidebar{
+        transform: translate(-443px, 0px);
+        position: absolute;
+    } */
+    .info {
+        height: 60vh;
+        width: 74vw;
+        margin: 73px;
+        border-radius: 50px;
+    }
+
+    .devinfo {
+        font-size: 6px;
+    }
+
+    .buttons {
+        font-size: 5px;
+    }
+
+    .btn {
+        margin-right: 8px;
+    }
+
+    .sidebar nav li {
+        list-style: none;
+        padding: 16px 0px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .contactform {
+        font-size: 10px;
+        padding: 10px 40px;
+    }
+
+    .contactform h1 {
+
+        padding: 4px 63px;
+        font-size: 2em;
+    }
+
+    .intro {
+        font-size: 10px;
+        margin: 34px 45px;
+
+    }
+
+    .intro h1,
+    h2 {
+        font-size: 2em;
+    }
+
+    .intro p {
+        font-size: 1em;
+    }
+
+    .main {
+        width: 100vw;
+    }
+
+    .tab-titles {
+        padding: 0px;
+        margin: 12px 1px;
+        font-size: 0.57em;
+    }
+
+    #emailHelp {
+        font-size: 1em;
+
+    }
+
+    .cp p {
+        font-size: 0.5em;
+    }
+    .copyright{
+        font-size: 5px;
+}
+.copyright-contact{
+    font-size: 0.25em;
+}
+.copyright-about{
+    font-size:0.25em
+}
+}
